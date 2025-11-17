@@ -63,28 +63,12 @@ app.get("/:shortCode", async (req, res) => {
 
 ---
 
-## Testing with `curl`
-
-* **Shorten a URL:**
-
-```bash
-curl -X POST http://localhost:3000/shorten \
-  -H "Content-Type: application/json" \
-  -d '{"originalUrl": "https://example.com"}'
-```
-
-* **Follow a short URL** (replace `abc123` with the generated code):
-
-```bash
-curl -v http://localhost:3000/abc123
-```
----
-
 ## Notes
 
 * Short codes are generated securely with `crypto.randomInt()`
 * TTL can be adjusted or removed for permanent URLs (or use a DB)
 * No front-end — the focus is on backend learning and API experimentation
+* Can run locally and test with curl or in web tools
 
 ---
 
